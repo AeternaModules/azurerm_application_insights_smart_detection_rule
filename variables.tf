@@ -14,8 +14,8 @@ EOT
     application_insights_id            = string
     name                               = string
     additional_email_recipients        = optional(set(string))
-    enabled                            = optional(bool, true)
-    send_emails_to_subscription_owners = optional(bool, true)
+    enabled                            = optional(bool) # Default: true
+    send_emails_to_subscription_owners = optional(bool) # Default: true
   }))
 }
 
