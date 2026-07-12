@@ -1,3 +1,7 @@
+output "application_insights_smart_detection_rules_id" {
+  description = "Map of id values across all application_insights_smart_detection_rules, keyed the same as var.application_insights_smart_detection_rules"
+  value       = { for k, v in azurerm_application_insights_smart_detection_rule.application_insights_smart_detection_rules : k => v.id }
+}
 output "application_insights_smart_detection_rules_additional_email_recipients" {
   description = "Map of additional_email_recipients values across all application_insights_smart_detection_rules, keyed the same as var.application_insights_smart_detection_rules"
   value       = { for k, v in azurerm_application_insights_smart_detection_rule.application_insights_smart_detection_rules : k => v.additional_email_recipients }
